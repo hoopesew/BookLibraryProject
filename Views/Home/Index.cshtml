@@ -8,7 +8,9 @@
     
         @foreach (Project p in Model.Books)
     {
-        <h3>@p.Title</h3>
+        <div class="card m-1 p-1">
+        <h3>@p.Title
+        </h3>
         <ul>
             <li>Book Author: @p.Author</li>
             <li>Publisher: @p.Publisher</li>
@@ -19,9 +21,13 @@
             <li>Price: $@p.Price</li>
 
         </ul>
+
+        </div>
+
     }
 
-<div page-model ="@Model.Paginationinfo" pageaction = "Index">
+<div page-model ="@Model.Paginationinfo" page-action = "Index" page-classes-enabled="true "page-class ="btn" 
+page-class-normal ="btn-outline-dark" page-class-selected ="btn-primary" class="btn-group pull-right m-1">
 
 </div>
 
